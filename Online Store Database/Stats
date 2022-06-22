@@ -1,0 +1,36 @@
+CREATE TABLE store(id integer primary key, name text, price integer, quantity integer, orders integer);
+
+INSERT INTO
+store
+VALUES
+(1, "aot patch", 24.99, 15, 76),
+(2, "dbz patch", 24.99,15, 33),
+(3, "uchiha patch", 24.99, 15, 25),
+(4, "custom poker cards", 23.63, 25, 11),
+(5, "tough cases", 20.20, 25, 1),
+(6, "mouse pad", 23.70, 25, 52),
+(7, "wireless charger", 57.21, 25, 12),
+(8, "spiral notebook", 12.81, 10, 34),
+(9, "dbz car mats", 48.99, 5, 12),
+(10, "uchiha mug", 18.99, 30, 27),
+(11, "dbz mug", 18.99, 12, 14),
+(12, "dbz mouse pad", 19.99, 32, 16),
+(13, "dbz slippers", 24.99, 28, 11),
+(14, "uzumaki patch", 24.99, 34, 23),
+(15, "dbz bag", 39.99, 23, 9 );
+
+SELECT * FROM store
+WHERE orders
+ORDER BY price asc
+
+--what is the avg price of items? 
+SELECT AVG(price)
+FROM store
+WHERE price
+
+--what are the 5 most ordered items? 
+SELECT name, price, orders 
+FROM store
+WHERE price
+ORDER BY orders desc 
+LIMIT 5;
